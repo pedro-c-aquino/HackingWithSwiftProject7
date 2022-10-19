@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1333970929006EE500C48142 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333970829006EE500C48142 /* DetailViewController.swift */; };
 		13D42D9C28FEE14A00CFD2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D42D9B28FEE14A00CFD2E4 /* AppDelegate.swift */; };
 		13D42D9E28FEE14A00CFD2E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D42D9D28FEE14A00CFD2E4 /* SceneDelegate.swift */; };
 		13D42DA028FEE14A00CFD2E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D42D9F28FEE14A00CFD2E4 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1333970829006EE500C48142 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		13D42D9828FEE14A00CFD2E4 /* HackingWithSwiftProject7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingWithSwiftProject7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D42D9B28FEE14A00CFD2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D42D9D28FEE14A00CFD2E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				13D42D9B28FEE14A00CFD2E4 /* AppDelegate.swift */,
 				13D42D9D28FEE14A00CFD2E4 /* SceneDelegate.swift */,
 				13D42D9F28FEE14A00CFD2E4 /* ViewController.swift */,
+				1333970829006EE500C48142 /* DetailViewController.swift */,
 				13D42DAF28FEE82600CFD2E4 /* Petition.swift */,
 				13D42DB128FEE8C800CFD2E4 /* Petitions.swift */,
 				13D42DA128FEE14A00CFD2E4 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 				13D42DA028FEE14A00CFD2E4 /* ViewController.swift in Sources */,
 				13D42DB028FEE82600CFD2E4 /* Petition.swift in Sources */,
 				13D42D9C28FEE14A00CFD2E4 /* AppDelegate.swift in Sources */,
+				1333970929006EE500C48142 /* DetailViewController.swift in Sources */,
 				13D42D9E28FEE14A00CFD2E4 /* SceneDelegate.swift in Sources */,
 				13D42DB228FEE8C800CFD2E4 /* Petitions.swift in Sources */,
 			);
