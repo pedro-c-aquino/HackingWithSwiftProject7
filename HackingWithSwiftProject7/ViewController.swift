@@ -14,6 +14,12 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let creditsButton = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+        navigationItem.rightBarButtonItem = creditsButton
+        
+        let filterButton = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterPetitions))
+        navigationItem.leftBarButtonItem = filterButton
+        
         let urlString: String
         
         if navigationController?.tabBarItem.tag == 0 {
@@ -62,6 +68,32 @@ class ViewController: UITableViewController {
     func showError() {
         let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func showCredits() {
+        let ac = UIAlertController(title: "Credits", message: "This data comes from the We The People API of the Whitehouse", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func filterPetitions() {
+        let ac = UIAlertController(title: "Filter Petitions", message: "Filter the petitions you want to see by key-words", preferredStyle: .alert)
+        ac.addTextField()
+        let filterAction = UIAlertAction(title: "Filter", style: .default) {[weak self] _ in
+            if let filterString = ac.textFields?[0].text {
+                var petitionsFiltered = [Petition]()
+                guard let petitionsArray = self?.petitions else { return }
+                for petition in petitionsArray {
+                    if petition.body.contains(filterString) {
+                        petitionsFiltered.append(petition)
+                    }
+                }
+                self?.petitions = petitionsFiltered
+                self?.tableView.reloadData()
+            }
+        }
+        ac.addAction(filterAction)
         present(ac, animated: true)
     }
 
